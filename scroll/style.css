@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    color: white;
+    background-color: black;
+}
+.box{
+    position: absolute;
+    overflow: hidden;
+    perspective: 500px;
+}
+
+.scroll{
+    position: absolute;
+    bottom: -12vw;
+    right: 0;
+    animation-name: scroll;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.scroll p{
+    color: orangered;
+    opacity: .3;
+    line-height: 0;
+    text-align: center;
+}
+@keyframes scroll{
+    from {
+        transform: rotateX(20deg) rotateZ(30deg);
+    } to{
+        transform: rotateX(20deg) rotateZ(30deg) translateY(60vw);
+    }
+}

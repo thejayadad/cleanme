@@ -11,6 +11,7 @@ body{
     flex-direction: column;
 }
 
+
 .box{
     width: 18rem;
     height: 10rem;
@@ -18,7 +19,6 @@ body{
     flex-direction: column;
     overflow: auto;
     position: relative;
-
 }
 .box > img{
     width: 100%;
