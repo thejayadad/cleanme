@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+header{
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 1rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    width: 100%;
+}
+
+header .logo{
+    color: #222;
+    font-weight: 200;
+}
+header .navbar a {
+    color: #222;
+}
+.navbar a:hover{
+    color: orange;
+}
+
+.icons a{
+    color: #222;
+    margin-left: 1rem;
+}
+header #toggler{
+    display: none;
+}
+
+#menu{
+    display: none;
+}
+.logo{
+    margin-left: -200px;
+}
+@media(max-width: 991px) {
+    header{
+        padding: 2rem;
+    }
+    .logo{
+        margin-left: 40px;
+    }
+    .icons{
+        margin-left: 20px;
+    }
+    section{
+        padding: 2rem;
+    }
+
+
+}
+
+@media (max-width: 768px){
+
+    header #menu{
+        display: block;
+    }
+    .icons{
+        margin-left: 20px;
+    }
+
+
+
+
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #eee;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    .navbar a{
+        display: block;
+        margin: 1rem;
+        text-align: center;
+        background: #fff;
+    }
+    header #toggler:checked ~ .navbar{
+        clip-path:polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+}
+
+@media(max-width: 450px) {
+
+
+}
+
+
+section{
+    padding: 2rem 9%;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.pexels.com/photos/5469038/pexels-photo-5469038.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content{
+    max-width: 50rem;
+    color: white;
+
+}
+.home .content span{
+    font-size: 3.5rem;
+    line-height: 1.5;
+    padding: 1rem 0;
+}
+.home .content h3{
+    color: white;
+    line-height: 1.5rem;
+}
+.home .content p{
+    font-size: 1.5rem;
+    color: #999;
+    line-height: 1.5;
+    padding: 1rem 0;
+
+}
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: #333;
+    color: #fff;
+    padding: .9rem 1rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+
+}
+.btn:hover{
+    background: orange;
+}
