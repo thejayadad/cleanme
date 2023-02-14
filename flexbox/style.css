@@ -10,6 +10,7 @@ body{
     align-items: center;
     height: 100vh;
 }
+
 .box{
     display: flex;
     height: 150px;
@@ -19,12 +20,10 @@ body{
 .bg1{
     background: url("https://images.pexels.com/photos/2114365/pexels-photo-2114365.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
 }
-
 .bg2{
     background: url("https://images.pexels.com/photos/1587927/pexels-photo-1587927.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
 
 }
-
 .bg3{
     background: url("https://images.pexels.com/photos/4560119/pexels-photo-4560119.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
 
@@ -39,7 +38,7 @@ body{
     background: url("https://images.pexels.com/photos/2072165/pexels-photo-2072165.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
 
 }
-.box > div{
+.box >div {
     flex: 1;
     border-radius: 1rem;
     background-position: center;
