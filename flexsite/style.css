@@ -10,7 +10,7 @@ html{
 }
 body{
     overflow-x: hidden;
-    color: #b6b4c2;
+    font-family: monospace;
 }
 
 header{
@@ -19,18 +19,23 @@ header{
     z-index: 1;
     width: 100%;
     background: #aac9ce;
+
+
+
 }
 .container{
-    width: 1200px;
+    width: 1280px;
     margin: auto;
+
 }
-.nav-box{
+.nav-bar{
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     padding: 10px 0;
-}
+    margin-left: 100px;
 
+}
 .logo{
     text-decoration: none;
     color: white;
@@ -44,14 +49,16 @@ header{
     display: none;
     color: white;
 }
+
 .line{
     width: 34px;
     height: 4px;
-    background-color: white;
+    background: white;
     margin-top: 5px;
 }
+
 .main-nav{
-    grid-column: 3;
+    grid-column: 2;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -65,31 +72,240 @@ header{
     color: white;
 }
 
-.main-nav li a:hover:after{
-    transform: scale(1,1);
-}
-
 .section-header h2{
     font-size: 50px;
     margin-bottom: 50px;
-    font-family: kings;
     color: white;
-    letter-spacing: 2px;
 }
-
 .banner-area{
     height: 100vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-    background:  url(https://images.pexels.com/photos/5469042/pexels-photo-5469042.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
-    text-align: center;
-    object-fit: cover;
+    background: url(https://images.pexels.com/photos/1289365/pexels-photo-1289365.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
     justify-content: center;
     align-items: center;
+
+}
+.banner-area h2{
+    font-size: 54px;
+    color: white;
+    margin: 15px auto;
+}
+.banner-area p{
+    color: white;
+    width: 70%;
+    margin: 15px auto;
+    font-size: 20px;
+    line-height: 1.5;
+}
+.banner-area a {
+    text-decoration: none;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 15px 30px;
+    display: inline-block;
+    border-radius: 50px;
+    transition: .5s;
+}
+.banner-area a:hover{
+    background-color: #aac9ce;
+    color: white;
+}
+.section-header h2{
+    color: #aac9ce;
+    font-weight: 300;
+}
+.about{
     text-align: center;
+    padding: 80px 0;
+}
+.img-area{
+    width: 350px;
     margin: auto;
-    width: 70vw;
-    border-radius: 10%;
-    margin-top: 50px;
+}
+.img-area img{
+    width: 100%;
+    height: auto;
+}
+section{
+    align-items: center;
+    display: flex;
+}
+.description h2{
+    font-size: 35px;
+    color: #aac9ce;
+}
+.description h3{
+    color: black;
+}
+.description p{
+    font-size: 18px;
+    width: 45%;
+    margin: auto;
+    line-height: 1.8;
+}
+.featured{
+    text-align: center;
+    padding: 80px 0;
+}
+.featured-content{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.my-features{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    width: 100%;
+}
+.feature-box{
+    padding: 70px 35px;
+    color: white;
+    background: lightblue;
+    box-shadow: -1rem 0 3rem #000;
+    transition: background .5s ease-in;
+}
+.feature-box:hover{
+    background: white;
+    color: lightblue;
+}
+.feature-box p{
+    line-height: 1.8;
+}
+.feature-box i{
+    font-size: 45px;
+}
+.gallery{
+    text-align: center;
+    padding: 80px 0;
+}
+.gallery-items{
+    display: flex;
+    justify-content: space-between;
+}
+.items{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 40px;
+    width: 100%;
+}
+.gallery-box img{
+    width: 100%;
+}
+
+.contact{
+    text-align: center;
+    padding: 80px 0;
+}
+.form-area form{
+    width: 100%;
+}
+form input,
+form textarea{
+    width: 70%;
+    border: 0;
+    outline: none;
+    background-color: #000;
+    padding: 15px;
+    margin: 15px 0;
+    color: white;
+    font-size: 18px;
+    border-radius: 8px;
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+footer{
+    padding: 20px;
+    background: #aac9ce;
+    text-align: center;
+
+}
+@media screen and (max-width: 1280px){
+    .container{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 770px){
+    header{
+        background-color: white;
+    }
+    .logo{
+        color: black;
+    }
+    .line{
+        background: #000;
+    }
+    .main-nav li a{
+        color: #111;
+    }
+    .label{
+        display: grid;
+        cursor: pointer;
+        grid-column: 3;
+        padding-right: 10px;
+    }
+    .main-nav{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column: 1/4;
+        text-align: center;
+        max-height: 0;
+        overflow: hidden;
+        transition: all .6s ease-in-out;
+
+    }
+    .nav-bar{
+        margin-left: -0px;
+    }
+    .nav-bar input:checked ~ .main-nav{
+        max-height: 500px;
+    }
+    .main-nav li{
+        padding: 15px 0;
+    }
+    .banner-area h2{
+        font-size: 20px;
+    }
+    .banner-area p{
+        font-size: 12px;
+    }
+    .banner-area a{
+        padding: 5px 20px;
+        font-size: 14px;
+    }
+    .description p{
+        font-size: 12px;
+        width: 80%;
+    }
+    .section-header h2{
+        font-size: 35px;
+    }
+    .img-area{
+        width: 100%;
+    }
+    .img-area img{
+        width: 80%;
+        height: auto;
+    }
+    .items{
+        grid-template-columns: repeat(auto-fit, min)(250px, 1fr);
+    }
+    form input,
+    form textarea{
+        width: 80%;
+    }
+    footer{
+        font-size: 12px;
+    }
+
 }
